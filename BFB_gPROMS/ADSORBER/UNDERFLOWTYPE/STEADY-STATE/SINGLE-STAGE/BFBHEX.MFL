@@ -1,0 +1,31 @@
+# Multiflash version: 4.1.24   August 2012 #
+# Date: 14 February 2014   Time: 15:16 #
+remove all;
+units temperature K pressure Pa enthalpy J/mol entropy J/mol/K volume m3/mol
+amounts mol viscosity Pas thcond W/m/K surten N/m diffusion m2/s;
+datum enthalpy compound entropy compound; set fractions;
+puredata INFODATA ;  
+components overwrite 1 WATER ;  
+chardata INFOCHAR TBSOEREIDE ;  
+bipset PRABIP 1 constant ;  
+bipset LGSTBIP 1 constant ;  
+bipset LQDBIP 1 constant ;  
+bipset CEDBIP 1 constant ;  
+bipdata erase ;  
+model MPRA PRA PSAT LDEN VDW PRABIP;
+model MPDVISC PDVISC LFIT;
+model MSTRAPP SPTHCOND;
+bipdata erase ;  
+model MLGSTMPRA LGST MPRA LGSTBIP;
+bipdata erase ;  
+model MLQD LQD HM MPRA MPDVISC LQDBIP;
+bipdata erase ;  
+model MCED CED FULLER CEDBIP;
+bipdata OILANDGAS4 INFOBIPS ;  
+pd GAS gas MPRA MPRA MPRA MPDVISC MSTRAPP MLGSTMPRA * MCED;
+pd LIQUID1 liquid MPRA MPRA MPRA MPDVISC MSTRAPP MLGSTMPRA * MLQD;
+key LIQUID1 not 007732-18-5#WATER#;
+units temperature K pressure Pa enthalpy J/mol entropy J/mol/K volume kg/m3
+amounts mole viscosity Pas thcond W/m/K surten N/m diffusion m2/s;
+set physprops 1VCSD;
+ 
