@@ -1,5 +1,5 @@
 # A simple makefile for creating the Bubbling Fluidized Bed Reactor Model distribution
-VERSION    := 2015.10.00
+VERSION    := `git describe --tags`
 PRODUCT    := Bubbling Fluidized Bed Reactor Model
 PROD_SNAME := BFBReactor
 LICENSE    := CCSI_TE_LICENSE_$(PROD_SNAME).txt
