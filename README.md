@@ -1,9 +1,19 @@
-# bfb_reactor
+# BFB Reactor
 A unified set of Bubbling Fluidized Bed Reactor models for various configurations in both steady-state and dynamic versions.
 
-## Development Practices
+Note: this product is also part of the [ProcessModels bundle](../../../ProcessModels_bundle)
 
-* Code development will be peformed in a forked copy of the repo. Commits will not be 
+## Getting Started
+See installation and user guide documents in the [documentation](docs) subdirectory.
+
+## Authors
+* Andrew Lee
+* Debangsu Bhattacharyya
+
+See also the list of [contributors](../../contributors) who participated in this project.
+
+## Development Practices
+* Code development will be performed in a forked copy of the repo. Commits will not be 
   made directly to the repo. Developers will submit a pull request that is then merged
   by another team member, if another team member is available.
 * Each pull request should contain only related modifications to a feature or bug fix.  
@@ -11,22 +21,9 @@ A unified set of Bubbling Fluidized Bed Reactor models for various configuration
   (e.g database host port) should not be checked in to the repo.
 * A practice of rebasing with the main repo should be used rather that merge commmits.
 
-## Getting Started
-
-TBD
-
-## Authors
-
-* Andrew Lee
-* Debangsu Bhattacharyya
-
-See also the list of [contributors](https://github.com/CCSI-Toolset/bfb_reactor/contributors) who participated in this project.
-
 ## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, 
-see the [tags on this repository](https://github.com/CCSI-Toolset/bfb_reactor/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available,
+[releases](../../releases) or [tags](../../tags) on this repository.
 
 ## License & Copyright
-
 See [LICENSE.md](LICENSE.md) file for details
