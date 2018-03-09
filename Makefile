@@ -7,9 +7,9 @@ PKG_DIR    := CCSI_$(PROD_SNAME)_$(VERSION)
 PACKAGE    := $(PKG_DIR).zip
 
 PAYLOAD := README.md \
-	BFB_ACM \
-     BFB_gPROMS \
-     $(LICENSE)
+           BFB_ACM \
+           BFB_gPROMS \
+           $(LICENSE)
 
 # Get just the top part (not dirname) of each entry so cp -r does the right thing
 PAYLOAD_TOPS := $(sort $(foreach v,$(PAYLOAD),$(shell echo $v | cut -d'/' -f1)))
